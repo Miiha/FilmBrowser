@@ -1,0 +1,202 @@
+@import "constants"
+
+$controlsHeight: 36px
+$borderColor: #555
+
+.controls
+  margin-top: 25px
+
+  display: flex
+
+  > div
+    flex: 5 5 33%
+
+  // input
+
+  .Select
+    $select-input-border-focus: #AAEE00
+
+    //&.is-focused
+    //  border-color: $select-input-border-focus lighten($select-input-border-focus, 5%) lighten($select-input-border-focus, 5%)
+    //  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 0 5px -1px fade($select-input-border-focus,50%)
+
+  .Select-control
+    background-color: $g3
+    border-radius: 0
+    border-color: $borderColor
+
+    .Select-value
+      color: $borderColor
+      border-color: $borderColor
+      background-color: rgba(45, 51, 58, 0.82)
+
+      .Select-value-icon
+        border-right-color: $borderColor
+
+  $placeholder-font-color: #666
+
+  .Select-placeholder
+    color: $placeholder-font-color
+    background-color: $g3
+
+  .Select-input
+    color: white
+
+  .Select-menu-outer
+    border-bottom-right-radius: 0
+    border-bottom-left-radius: 0
+    border: none
+    border-top: 1px solid $borderColor
+    background-color: $g3
+
+  .Select-option
+    color: #aaa
+    background-color: #333
+
+    $select-option-selected-bg: #666
+    $select-option-selected-color: #aaee00
+
+    $select-option-focused-bg: #808080
+    $select-option-focused-color: $background
+
+    &.is-selected
+      background-color: $select-option-selected-bg
+      color: $select-option-selected-color
+
+    &.is-focused
+      background-color: $select-option-focused-bg
+      color: $select-option-focused-color
+
+      .character
+        font-weight: bold
+
+  //&.is-disabled
+    //color: $select-option-disabled-color
+    //cursor: default
+
+  .subtitleSearch
+    .inputs
+      margin-top: 5px
+
+    .Select-value-label
+      max-width: 150px
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
+      color: $placeholder-font-color
+
+    .Select-option
+      .subtitle
+        display: flex
+        flex-flow: row nowrap
+
+        .character
+          color: #333
+          padding: 2px 4px
+          background-color: transparent
+          font-weight: bold
+
+        img
+          flex: 0 1 auto
+          height: 40px
+          box-shadow: 1px 1px 1px #111
+
+
+        .data
+          margin-left: 10px
+          flex: 0 1 auto
+          min-width: 0
+          text-overflow: ellipsis
+
+        p.timecode
+          font-size: 10pt
+          margin: 0
+
+        p
+          margin-bottom: 4px
+
+    input
+      margin-right: 10px
+
+  .characterSearch
+    .Select-menu
+      background-color: #555
+
+    .indicator
+      margin-right: 10px
+      vertical-align: middle
+      display: inline-block
+      background-color: black
+      width: 25px
+      height: 25px
+      border-radius: 50%
+      -moz-border-radius: 50%
+      -webkit-border-radius: 50%
+
+  .Select .Select-aria-only
+    float: left // fixes line break on firefox
+
+  .sliderControls
+    height: $controlsHeight
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+
+  .sliderControls > *
+    padding: 10px
+
+  .slider
+    flex: auto
+    margin: 5px 12px 0
+
+  .slider .slider-track
+    display: block
+    height: 1px
+    background: #51A7F9
+
+  .slider.slider-horizontal
+    width: auto
+    .slider-track
+      height: 1px
+
+  .slider .slider-handle
+    background: gray
+    margin-top: 0
+    width: 14px
+    height: 14px
+
+  .slider-track
+    height: 1px
+
+  .otherControls
+    .button
+      height: $controlsHeight
+      width: $controlsHeight
+      background-color: $g3
+      color: white
+      padding: 2px 10px
+      text-align: center
+      text-decoration: none
+      display: inline-block
+      font-size: 16px
+      margin: 0 0
+      border: 1px solid $borderColor
+      -webkit-transition-duration: 0.4s /* Safari */
+      transition-duration: 0.4s
+      cursor: pointer
+      outline: 0
+
+
+    .button:hover
+      background-color: #AAA
+      color: black
+
+    .inputs
+      margin-top: 10px
+      
+      input
+        margin-right: 10px
+
+label
+  color: #888
+

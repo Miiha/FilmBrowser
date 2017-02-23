@@ -1,0 +1,37 @@
+@import "constants"
+
+.chapters
+  width: 100%
+  height: 30px
+  position: fixed
+  bottom: 0
+  background-color: $background
+
+  .number
+    fill: white
+    pointer-events: none
+
+  .chapter
+    rect
+      fill: #333
+
+    text
+      fill: #666
+
+.d3Chapters
+  position: absolute
+
+.d3ChaptersIndicators
+  pointer-events: none
+  position: relative
+
+  rect
+    fill: #777
+    fill-opacity: 0.4
+
+.d3-tip
+  .chapter
+    margin-bottom: 5px
+
+  .timeCode
+    margin-bottom: 5px

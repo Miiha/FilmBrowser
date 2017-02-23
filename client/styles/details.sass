@@ -1,0 +1,93 @@
+.details
+  img
+    width: 580px
+    margin: 10px 10px 10px 10px
+
+  .content
+    padding: 1em
+
+  a
+    text-decoration: none
+
+  .list-group-item
+    padding: 0
+  //  background-color: #007eff
+
+  .filtered
+    background-color: #EEE
+
+  .indicator
+    background-color: #EEE
+    position: relative
+    height: 10px
+
+    .value
+      background-color: #999
+      position: absolute
+      height: 100%
+
+  .stats
+    display: flex
+    flex-flow: row wrap
+    text-align: center
+    margin-top: 10px
+    margin-bottom: 10px
+
+    > div
+      flex: 0 0 33%
+
+    p
+      font-size: 12pt
+
+    .seconds
+      margin-bottom: 0
+
+    .time > p
+      margin-bottom: 0
+
+    .dash
+      margin-top: -6px
+      margin-bottom: -18px
+
+  .big
+    font-size: 20pt
+    font-weight: bold
+
+  .mid
+    font-size: 20pt
+
+  .small
+    font-size: 12pt
+
+  .xsmall
+    font-size: 8pt
+
+  .subtitle
+    padding: 20px 15px
+
+    a > .character
+      color: white
+      padding: 2px 4px
+      background-color: transparent
+      font-weight: normal
+      margin-right: 10px
+
+    .indicator
+      height: 4px
+      background-color: #CCC
+
+      .value
+        $dark: #BBB
+        $light: #DDD
+        background: repeating-linear-gradient(-45deg, $light, $light 5px, $dark 5px, $dark 10px)
+      //background-size: 16px 48px
+
+    a:hover span
+      padding: 4px
+      font-weight: bold
+
+    .text
+      color: black
+
+    a.text:hover
+      text-decoration: underline

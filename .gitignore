@@ -1,0 +1,16 @@
+node_modules/
+.idea/
+
+*.DS_Store
+*.swp
+*.iml
+*.log
+
+dist/
+
+src/client.min.js
+src/*.css
+
+.env.server
+.env.api
+.env

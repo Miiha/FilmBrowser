@@ -1,0 +1,127 @@
+@import "filter"
+@import "constants"
+
+// vars
+
+@mixin border($color: $borderColor)
+  border: 0.5px solid $color
+
+/*
+ * Customize slider.
+ */
+
+.shots .number
+  fill: gray
+
+.shots
+  position: absolute
+  height: $shotsHeight
+  top: 20px
+  left: 0
+  bottom: 0
+  right: 0px
+  overflow: auto
+
+html
+  overflow-x: hidden
+
+.shots
+  overflow-x: scroll
+  overflow-y: hidden
+
+  .shot
+    .keyframe
+      fill: black
+
+image
+  -webkit-filter: grayscale(60%)
+  filter: blur(100%)
+
+.shots::-webkit-scrollbar
+  display: none  // Safari and Chrome
+
+.keyframe
+  @include border(black)
+
+.exit
+  stroke: red
+
+.d3-tip
+  line-height: 1
+  font-weight: bold
+  padding: 12px
+  background: rgba(0, 0, 0, 0.8)
+  color: #fff
+  border-radius: 2px
+
+  p.subtitle
+    color: white
+
+    .character
+      padding: 0px 2px
+      border-radius: 2px
+
+.d3-tip
+  max-width: 400px
+  line-height: 150%
+  font-weight: bold
+  padding: 10px
+  background: rgba(0, 0, 0, 0.8)
+  color: #fff
+  border-radius: 2px
+  pointer-events: none
+
+  .subtitle
+    margin-bottom: 5px
+
+  .timeCodes
+    padding: 0
+    margin-bottom: 0
+    font-weight: normal
+    color: #555
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after
+  box-sizing: border-box
+  display: inline
+  font-size: 10px
+  width: 100%
+  line-height: 1
+  color: rgba(0, 0, 0, 0.8)
+  position: absolute
+  pointer-events: none
+
+
+/* Northward tooltips */
+.d3-tip.n:after
+  content: "\25BC"
+  margin: -1px 0 0 0
+  top: 100%
+  left: 0
+  text-align: center
+
+
+/* Eastward tooltips */
+.d3-tip.e:after
+  content: "\25C0"
+  margin: -4px 0 0 0
+  top: 50%
+  left: -8px
+
+
+/* Southward tooltips */
+.d3-tip.s:after
+  content: "\25B2"
+  margin: 0 0 1px 0
+  top: -8px
+  left: 0
+  text-align: center
+
+
+/* Westward tooltips */
+.d3-tip.w:after
+  content: "\25B6"
+  margin: -4px 0 0 -1px
+  top: 50%
+  left: 100%
+

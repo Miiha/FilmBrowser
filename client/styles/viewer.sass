@@ -1,0 +1,93 @@
+@import "filter"
+@import "constants"
+
+// vars
+
+@mixin border($color: $borderColor)
+  border: 0.5px solid $color
+
+h1
+  color: white
+  margin-left: auto
+  margin-right: auto
+  text-align: center
+
+/*
+ * Customize slider.
+ */
+
+$shotsInset: 40px
+
+.top
+  margin: 0 $shotsInset 0 $shotsInset
+
+.mid
+  position: relative
+
+  button
+    width: $shotsInset
+    background-color: $g3
+    border: none
+    color: #666
+    text-align: center
+    text-decoration: none
+    display: inline-block
+    font-size: 16px
+    margin: 0 0
+    -webkit-transition-duration: 0.4s /* Safari */
+    transition-duration: 0.4s
+    cursor: pointer
+    outline: 0
+
+  button.left
+    position: absolute
+    left: 0
+    top: 120px
+
+  button.right
+    position: absolute
+    right: 0
+    top: 120px
+
+  button:hover
+    background-color: $active
+    color: black
+
+  .background
+    position: absolute
+    top: 120px
+    width: 100%
+    background-color: black
+
+.wrapper
+  margin: 0 $shotsInset 0 $shotsInset
+
+  .content
+    height: $shotsHeight
+    display: inline-block
+    width: 100%
+    position: relative
+    overflow: hidden
+    border-top: 0
+
+.hidden
+  opacity: 0
+
+.spinner
+  width: 60px
+  height: 50px
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+
+  .bounce1
+    background-color: $spinnerColor
+
+  .bounce2
+    background-color: $spinnerColor
+
+  .bounce3
+    background-color: $spinnerColor
